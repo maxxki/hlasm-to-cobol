@@ -1,4 +1,4 @@
-# Maxxki-Cobol: HLASM to COBOL Transpiler
+# Maxxki-Cobol: HLASM to COBOL Transpiler Framework 
 
 Maxxki-Cobol is a sophisticated transpiler designed to convert IBM High-Level Assembler (HLASM) source code into maintainable COBOL. It leverages a modular, plugin-based architecture and optional Machine Learning (ML) assistance to handle the complexities of mainframe legacy code modernization.
 
