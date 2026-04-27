@@ -2,17 +2,17 @@
 
 Maxxki-Cobol is a sophisticated transpiler designed to convert IBM High-Level Assembler (HLASM) source code into maintainable COBOL. It leverages a modular, plugin-based architecture and optional Machine Learning (ML) assistance to handle the complexities of mainframe legacy code modernization.
 
-## 🚀 Key Features
+# Key Features
 
-- **Hybrid Parsing Engine**: Combines structural PLY-based AST generation with regex-based fallbacks for high resilience against varying HLASM dialects.
-- **Intelligent Register Mapping**: Automatically maps Assembler registers (R0-R15) to COBOL `WORKING-STORAGE` variables (e.g., `WS-R0` through `WS-R15`).
-- **Control Flow Transformation**: 
+- Hybrid Parsing Engine: Combines structural PLY-based AST generation with regex-based fallbacks for high resilience against varying HLASM dialects.
+- Intelligent Register Mapping: Automatically maps Assembler registers (R0-R15) to COBOL `WORKING-STORAGE` variables (e.g., `WS-R0` through `WS-R15`).
+- Control Flow Transformation: 
     - Converts `BR 14` to `GOBACK`.
     - Translates conditional branches (`BE`, `BNE`, `BL`, etc.) into idiomatic COBOL `IF` statements by tracking comparison states.
-- **Literal Handling**: Automated extraction and conversion of HLASM literals (e.g., `=F'42'`) into COBOL numeric constants.
-- **Plugin-Based Architecture**: Easily extendable instruction handlers organized by category (Arithmetic, Boolean, Branch, Move, etc.).
-- **ML-Assisted Conversion**: Optional integration with Hugging Face models (like `Salesforce/codet5p-770m`) for complex statement translation.
-- **Detailed Reporting**: Generates a comprehensive conversion report and a JSON-based review file for every processed source.
+- Literal Handling: Automated extraction and conversion of HLASM literals (e.g., `=F'42'`) into COBOL numeric constants.
+- Plugin-Based Architecture: Easily extendable instruction handlers organized by category (Arithmetic, Boolean, Branch, Move, etc.).
+- ML-Assisted Conversion: Optional integration with Hugging Face models (like `Salesforce/codet5p-770m`) for complex statement translation.
+- Detailed Reporting: Generates a comprehensive conversion report and a JSON-based review file for every processed source.
 
 ## 🛠️ Installation
 
