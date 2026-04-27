@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "source": "arith.asm",
+    "total_lines": 9,
+    "success_rate": 0.89,
+    "high_risk_count": 0
+  },
+  "details": [
+    {
+      "original": "MAIN     CSECT",
+      "cobol": "*> CSECT MAIN -> PROGRAM-ID",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "DirectivePlugin"
+    },
+    {
+      "original": "         USING MAIN,15",
+      "cobol": "*> IGNORED DIRECTIVE:          USING MAIN,15 (USING is an Assembler linkage directive)",
+      "risk": "NONE",
+      "confidence": "MEDIUM",
+      "plugin": "DirectivePlugin"
+    },
+    {
+      "original": "         L     1,=F'10'",
+      "cobol": "       MOVE 10 TO WS-R1.",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "InstructionPlugin/LoadStoreHandler"
+    },
+    {
+      "original": "         L     2,=F'20'",
+      "cobol": "       MOVE 20 TO WS-R2.",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "InstructionPlugin/LoadStoreHandler"
+    },
+    {
+      "original": "         AR    1,2",
+      "cobol": "       ADD WS-R2 TO WS-R1.",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "InstructionPlugin/ArithmeticHandler"
+    },
+    {
+      "original": "         ST    1,RESULT",
+      "cobol": "       MOVE WS-R1 TO RESULT.",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "InstructionPlugin/LoadStoreHandler"
+    },
+    {
+      "original": "         BR    14",
+      "cobol": "       GOBACK.",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "InstructionPlugin/BranchHandler"
+    },
+    {
+      "original": "RESULT   DS    F",
+      "cobol": "",
+      "risk": "NONE",
+      "confidence": "HIGH",
+      "plugin": "DataDivisionPlugin"
+    },
+    {
+      "original": "         END   MAIN",
+      "cobol": "*> IGNORED DIRECTIVE:          END   MAIN",
+      "risk": "NONE",
+      "confidence": "MEDIUM",
+      "plugin": "DirectivePlugin"
+    }
+  ]
+}
