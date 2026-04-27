@@ -20,7 +20,7 @@ Ensure you have Python 3.8+ installed.
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://maxxki.github.hlasm-to-cobol.git
 cd cobol
 
 # Install dependencies and the package in editable mode
