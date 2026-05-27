@@ -1,12 +1,12 @@
 # maxxki hlasm-to-cobol 🔧
 
-> **M**A**x**K**I**
+> **M**A**X**X**K**I**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![COBOL-85](https://img.shields.io/badge/target-COBOL--85-green.svg)](https://www.ibm.com/docs/en/cobol-zos)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**maxxki** ist ein intelligenter, plugin-basierter Konverter zur automatisierten Migration von IBM High Level Assembler (HLASM) nach COBOL-85. Das Framework kombiniert regelbasierte Transformation mit optionaler ML-gestützter Code-Generierung und symbolischer Zustandsanalyse.
+Dieses System ist ein intelligenter, plugin-basierter Konverter zur automatisierten Migration von IBM High Level Assembler (HLASM) nach COBOL-85. Das Framework kombiniert regelbasierte Transformation mit optionaler ML-gestützter Code-Generierung und symbolischer Zustandsanalyse.
 
 ---
 
