@@ -1,6 +1,6 @@
-# maxxki 🔧
+# maxxki hlasm-to-cobol 🔧
 
-> **M**ainframe **A**ssembler E**x**pert – **K**onvertierung **I**ntelligence
+> **M**A**x**K**I**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![COBOL-85](https://img.shields.io/badge/target-COBOL--85-green.svg)](https://www.ibm.com/docs/en/cobol-zos)
