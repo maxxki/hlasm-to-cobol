@@ -29,8 +29,8 @@ Dieses System ist ein intelligenter, plugin-basierter Konverter zur automatisier
 
 ```bash
 # Repository klonen
-git clone https://github.com/dein-org/maxxki.git
-cd maxxki
+git clone https://github.com/maxxki/hlasm-to-cobol
+cd hlasm-to-cobol
 
 # Virtuelle Umgebung empfohlen
 python -m venv .venv
@@ -60,13 +60,13 @@ pip install ply
 ### Einzeldatei konvertieren
 
 ```bash
-python -m maxxki convert examples/arith.asm --output arith.cbl
+python -m main.py examples/arith.asm --output arith.cbl
 ```
 
 ### Batch-Migration
 
 ```bash
-python -m maxxki batch ./source-dir --output ./cobol-output/ --report migration.json
+python -m main.py batch ./source-dir --output ./cobol-output/ --report migration.json
 ```
 
 ### Programmatische Nutzung
@@ -98,27 +98,27 @@ report.save_json("migration-report.json")
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                         maxxki                               │
+│                         maxxki                              │
 ├─────────────────────────────────────────────────────────────┤
 │  ┌─────────────┐    ┌─────────────┐    ┌─────────────────┐  │
 │  │   Parser    │───→│ Orchestrator│───→│  Plugin-Chain   │  │
 │  │ (PLY/Regex) │    │  (Pipeline) │    │  (Priority)     │  │
 │  └─────────────┘    └──────┬──────┘    └─────────────────┘  │
-│                            │                                 │
-│              ┌─────────────┼─────────────┐                   │
-│              ▼             ▼             ▼                   │
+│                            │                                │
+│              ┌─────────────┼─────────────┐                  │
+│              ▼             ▼             ▼                  │
 │  ┌─────────────────┐ ┌──────────┐ ┌─────────────────┐       │
-│  │ DataDivisionPlugin│ │Instruction│ │  ML-Bridge      │       │
+│  │ DataDivisionPlugin│ │Instruction│ │  ML-Bridge   │       │
 │  │ (DS/DC → COBOL) │ │Plugin    │ │ (CodeT5+)       │       │
 │  └─────────────────┘ └────┬─────┘ └─────────────────┘       │
-│                           │                                  │
+│                           │                                 │
 │              ┌────────────┼────────────┐                    │
 │              ▼            ▼            ▼                    │
-│  ┌──────────────┐ ┌────────────┐ ┌──────────────┐          │
-│  │ArithmeticHandler│ │BranchHandler│ │LoadStoreHandler│          │
-│  │MoveHandler     │ │CompareHandler│ │BooleanHandler │          │
-│  │ShiftHandler    │ │DecimalHandler│ │FallbackHandler│          │
-│  └──────────────┘ └────────────┘ └──────────────┘          │
+│  ┌──────────────┐ ┌────────────┐ ┌──────────────┐           │
+│  │Arithm.Handl. │ │BranchHandl │ │LoadStoreHandl│           │
+│  │MoveHandler   │ │CompareHandl│ │BooleanHandler│           │
+│  │ShiftHandler  │ │DecimalHandl│ │FallbackHandl │           │
+│  └──────────────┘ └────────────┘ └──────────────┘           │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -247,8 +247,8 @@ Wir freuen uns über Beiträge! Siehe [`CONTRIBUTING.md`](CONTRIBUTING.md) für 
 
 ```bash
 # Development-Setup
-git clone https://github.com/dein-org/maxxki.git
-cd maxxki
+git clone https://github.com/maxxki/hlasm-to-cobol
+cd hlasm-to-cobol
 pip install -e ".[dev]"
 pre-commit install
 ```
@@ -264,7 +264,7 @@ Dieses Projekt folgt dem [Contributor Covenant](https://www.contributor-covenant
 **MIT License** – siehe [`LICENSE`](LICENSE)
 
 ```
-Copyright (c) 2026 maxxki Contributors
+Copyright (c) 2026 maxxki - Maximilian Kiefer
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
